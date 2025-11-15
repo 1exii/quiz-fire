@@ -50,7 +50,7 @@ QuizFire will analyze the webpage content, summarize key points, and build a cus
 
 ---
 
-## 📄 Google Docs Support
+## Google Docs Support
 > **Important:**  
 > Direct Google Docs integration is **not supported** due to Chrome extension permission restrictions.  
 > QuizFire currently **cannot** read content from private Google Docs automatically.
@@ -87,3 +87,4 @@ More export formats will be added in future updates.
 - **Modular background/service worker architecture**
 
 ---
+
