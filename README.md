@@ -1,4 +1,4 @@
-# QuizFire — AI-Powered Quiz Generation Chrome Extension
+# QuizFire
 
 QuizFire is a Chrome extension that automatically generates quizzes from a webpage using the **Gemini API**. It supports multiple question types — multiple choice, true/false, and short answer — and can generate explanations after submission.
 
@@ -87,4 +87,5 @@ More export formats will be added in future updates.
 - **Modular background/service worker architecture**
 
 ---
+
 
