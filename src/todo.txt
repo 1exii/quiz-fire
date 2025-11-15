@@ -1,0 +1,3 @@
+- google docs
+- have to uncheck recheck timer
+- loading ugly on popup

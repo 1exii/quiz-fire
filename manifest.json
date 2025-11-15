@@ -7,19 +7,39 @@
         "activeTab",
         "storage",
         "scripting",
-        "contextMenus"
+        "contextMenus",
+        "identity"
     ],
+    "oauth2": {
+        "client_id": "344281796492-vs36tuelf8naneanr27474gidq5apq3e.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/documents.readonly",
+            "https://www.googleapis.com/auth/drive.readonly"
+        ]
+    },
     "host_permissions": [
         "<all_urls>"
     ],
     "background": {
         "service_worker": "src/background.js"
-    }, 
+    },
+    "action": {
+        "default_popup": "src/popup.html"
+    },
     "content_scripts": [
         {
-        "matches": ["<all_urls>"],
-        "js": ["src/content.js"],
-        "run_at": "document_idle"
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content.js"
+            ],
+            "run_at": "document_idle"
         }
-    ]
+    ],
+    "web_accessible_resources": [{
+        "resources": ["src/quiz.html", "src/quiz.js"],
+        "matches": ["<all_urls>"]
+    }],
+    "options_page": "src/settings.html"
 }

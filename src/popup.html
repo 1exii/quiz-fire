@@ -4,16 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Quiz Generator</title>
+    <title>Quiz Fire</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
+    <div class="app-container">
+        <div class="header">
             <h1>Quiz Fire</h1>
-        </header>
+            <p class="subtitle">Generate quizzes from any webpage</p>
+        </div>
 
+        <div class="content">
+            <div class="api-status">
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Checking API status...</span>
+                </div>
+            </div>
+
+            <div class="option-buttons">
+                <button id="scan-page" class="btn primary">
+                    <span class="icon">📝</span>
+                    Generate Quiz
+                </button>
+                <button id="open-settings" class="btn secondary">
+                    <span class="icon">⚙️</span>
+                    Settings
+                </button>
+            </div>
+
+            <div class="loading-container hidden">
+                <div class="spinner"></div>
+                <p>Generating your quiz...</p>
+            </div>
+
+            <div id="quiz-display" class="quiz-display hidden">
+            </div>
+        </div>
+    </div>
     <script src="popup.js"></script>
 </body>
 

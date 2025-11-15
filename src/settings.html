@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Fire - Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Quiz Fire</h1>
+            <p class="subtitle">Customize your quiz settings</p>
+        </div>
+
+        <div class="content">
+            <div class="settings-section">
+                <h2>API Configuration</h2>
+                <div class="form-group">
+                    <label for="ai-provider">AI Provider</label>
+                    <select id="ai-provider" class="form-control">
+                        <option value="gemini">Google Gemini</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="api-key">API Key</label>
+                    <div class="api-key-container">
+                        <input type="password" id="api-key" class="form-control" placeholder="Enter your API key">
+                        <button id="toggle-api-key" class="btn secondary">Show</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h2>Quiz Settings</h2>
+                <div class="form-group">
+                    <label for="question-count">Number of Questions</label>
+                    <input type="number" id="question-count" class="form-control" min="1" max="20" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="difficulty">Difficulty Level</label>
+                    <select id="difficulty" class="form-control">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Question Types</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="multiple-choice" checked>
+                        <label for="multiple-choice">Multiple Choice</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="true-false" checked>
+                        <label for="true-false">True/False</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="short-answer" checked>
+                        <label for="short-answer">Short Answer</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Timer</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="timer-enabled">
+                        <label for="timer-enabled">Enable Timer</label>
+                    </div>
+                    <div id="timer-settings" class="timer-settings">
+                        <label for="timer-duration">Timer Duration (seconds)</label>
+                        <input type="number" id="timer-duration" class="form-control" min="10" max="300" value="60">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Other Options</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="include-explanations" checked>
+                        <label for="include-explanations">Include Explanations</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-actions">
+                <button id="reset-defaults" class="btn secondary">Reset to Defaults</button>
+                <button id="save-settings" class="btn primary">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="status-message" class="hidden">
+        <span class="message-text"></span>
+        <button class="close-btn">×</button>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+
+</html>
